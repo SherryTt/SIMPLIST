@@ -142,7 +142,7 @@ export default function App() {
     Alert.alert("Are you sure?", "Delete all lists?", [
       {
         text: 'Yes',
-        onPress: () => setItems([]),
+        onPress: () => {setItems([]); setTotalNum(totalNum == 0)},
       },
       { text: 'No' },
     ]);
